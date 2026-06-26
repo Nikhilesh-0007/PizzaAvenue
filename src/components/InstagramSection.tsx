@@ -51,7 +51,7 @@ export function InstagramSection() {
             viewport={{ once: true }}
           >
             <Link
-              href="https://www.instagram.com/the.pizza.avenue?igsh=Z2N5cnN2bnk1ZzU1"
+              href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"

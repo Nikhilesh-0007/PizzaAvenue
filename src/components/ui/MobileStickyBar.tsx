@@ -73,7 +73,7 @@ export function MobileStickyBar() {
             </Link>
 
             <Link
-              href="https://www.instagram.com/the.pizza.avenue?igsh=Z2N5cnN2bnk1ZzU1"
+              href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex flex-col items-center justify-center gap-1 p-2 text-dark/70 hover:text-primary transition-colors"
