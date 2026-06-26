@@ -11,31 +11,31 @@ const features = [
   },
   {
     icon: <Flame size={32} />,
-    title: "Wood-fired Taste",
-    description: "Baked at extreme temperatures, our pizzas feature the signature blistered crust and smoky flavor.",
+    title: "Authentic Taste",
+    description: "Baked at extreme temperatures, our pizzas feature the signature blistered crust and smoky flavor of Naples.",
   },
   {
     icon: <Heart size={32} />,
-    title: "Handmade with Passion",
-    description: "Our dough is fermented for 48 hours and hand-stretched by our master pizzaiolos.",
+    title: "Handmade Dough",
+    description: "Our dough is fermented for 48 hours and hand-stretched daily by our master pizzaiolos.",
   },
   {
     icon: <Wallet size={32} />,
-    title: "Affordable Prices",
+    title: "Affordable Pricing",
     description: "Premium quality shouldn't break the bank. Enjoy authentic taste at neighborhood-friendly prices.",
   },
 ];
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 bg-card relative z-10 border-t border-b border-white/5">
+    <section className="py-24 bg-card relative z-10 border-y border-dark/5">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-heading tracking-[-0.02em] text-3xl md:text-5xl font-bold text-white mb-4"
+            className="font-heading tracking-[-0.02em] text-4xl md:text-5xl font-bold text-foreground mb-4"
           >
             Why Choose <span className="text-primary italic">Us</span>
           </motion.h2>
@@ -49,13 +49,13 @@ export function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-background rounded-3xl p-8 border border-white/5 hover:border-primary/30 transition-colors duration-300 group text-center flex flex-col items-center"
+              className="bg-background rounded-3xl p-8 shadow-sm border border-dark/5 hover:shadow-[0_15px_40px_rgba(244,180,0,0.15)] hover:-translate-y-2 hover:border-secondary/30 transition-all duration-500 group text-center flex flex-col items-center"
             >
-              <div className="w-16 h-16 rounded-2xl bg-white/5 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <div className="w-20 h-20 rounded-full bg-card shadow-inner border border-dark/5 text-primary flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-accent group-hover:text-white group-hover:shadow-lg transition-all duration-500 group-hover:scale-110">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+              <h3 className="text-xl font-bold text-foreground mb-3">{feature.title}</h3>
+              <p className="text-dark/70 text-sm leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
         </div>

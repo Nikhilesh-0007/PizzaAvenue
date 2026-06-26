@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0F0F0F;
-  --foreground: #FFFFFF;
+  --background: #111111; /* Dark background */
+  --foreground: #FAFAFA; /* Light text */
   --primary: #C62828; /* Brand Red */
-  --secondary: #F4B41A;
-  --card: #1A1A1A;
+  --secondary: #F4B400; /* Golden Yellow */
+  --card: #1A1A1A; /* Slightly lighter dark for cards */
+  --accent: #E53935; /* Secondary Red */
+  --dark: #EAEAEA; /* Changed to light gray so text-dark/X becomes legible on dark backgrounds */
 }
 
 @theme inline {
@@ -14,6 +16,8 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-dark: var(--dark);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: 'Satoshi', 'General Sans', 'Geist', var(--font-inter), sans-serif;
 }
@@ -32,12 +36,12 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: var(--card);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary);
+  background: var(--accent);
 }

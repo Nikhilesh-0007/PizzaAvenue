@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/HeroSection";
 import { FeaturedPizzas } from "@/components/FeaturedPizzas";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { InstagramSection } from "@/components/InstagramSection";
 import { Reviews } from "@/components/Reviews";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <FeaturedPizzas />
       <WhyChooseUs />
+      <InstagramSection />
       <Reviews />
     </main>
   );

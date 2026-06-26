@@ -2,30 +2,36 @@
 
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import Image from "next/image";
 
 const reviews = [
   {
     name: "Amit",
+    image: "https://i.pravatar.cc/150?u=Amit",
     rating: 5,
     text: "Amazing Neapolitan pizza with a perfect soft crust and rich flavors. Great value for money and a must-visit in Sainikpuri.",
   },
   {
     name: "Priya",
+    image: "https://i.pravatar.cc/150?u=Priya",
     rating: 5,
     text: "Loved the half-and-half option and the freshness of the pizza. The taste, quality, and pricing make it stand out.",
   },
   {
     name: "Rahul",
+    image: "https://i.pravatar.cc/150?u=Rahul",
     rating: 5,
     text: "A hidden gem for pizza lovers. Authentic Italian-style pizza, hygienic setup, and very budget-friendly.",
   },
   {
     name: "Sneha",
+    image: "https://i.pravatar.cc/150?u=Sneha",
     rating: 5,
     text: "Excellent taste, quick service, and really affordable prices. The classic Neapolitan pizza is a must-try.",
   },
   {
     name: "Arjun",
+    image: "https://i.pravatar.cc/150?u=Arjun",
     rating: 5,
     text: "Great place for street-style artisan pizza. Freshly made, flavorful, and definitely worth the visit.",
   },
@@ -43,7 +49,7 @@ export function Reviews() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-heading tracking-[-0.02em] text-3xl md:text-5xl font-bold text-white mb-4"
+            className="font-heading tracking-[-0.02em] text-4xl md:text-5xl font-bold text-foreground mb-4"
           >
             What Our <span className="text-primary italic">Guests</span> Say
           </motion.h2>
@@ -61,16 +67,16 @@ export function Reviews() {
           transition={{
             repeat: Infinity,
             ease: "linear",
-            duration: 30, // Adjust speed here
+            duration: 35, 
           }}
           className="flex w-max gap-8 px-4 group-hover:[animation-play-state:paused]"
         >
           {duplicatedReviews.map((review, index) => (
             <div
               key={index}
-              className="bg-card rounded-3xl p-8 border border-white/5 hover:border-primary/30 transition-colors duration-300 relative w-[350px] md:w-[400px] shrink-0 flex flex-col"
+              className="bg-card/80 backdrop-blur-xl rounded-[2rem] p-8 border border-dark/5 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 relative w-[350px] md:w-[400px] shrink-0 flex flex-col"
             >
-              <Quote size={40} className="absolute top-6 right-6 text-white/5 transition-colors duration-300" />
+              <Quote size={40} className="absolute top-6 right-6 text-primary/10 transition-colors duration-300" />
               
               <div className="flex gap-1 mb-6">
                 {[...Array(review.rating)].map((_, i) => (
@@ -78,12 +84,15 @@ export function Reviews() {
                 ))}
               </div>
               
-              <p className="text-gray-300 italic mb-8 leading-relaxed flex-grow">"{review.text}"</p>
+              <p className="text-dark/80 italic mb-8 leading-relaxed flex-grow font-medium">"{review.text}"</p>
               
               <div className="flex items-center gap-4 mt-auto">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-background shadow-sm">
+                  <Image src={review.image} alt={review.name} fill className="object-cover" />
+                </div>
                 <div>
-                  <h4 className="font-bold text-white text-lg">{review.name}</h4>
-                  <span className="text-sm text-gray-500">Local Guide</span>
+                  <h4 className="font-bold text-foreground text-lg">{review.name}</h4>
+                  <span className="text-sm text-dark/50 font-semibold">Local Guide</span>
                 </div>
               </div>
             </div>

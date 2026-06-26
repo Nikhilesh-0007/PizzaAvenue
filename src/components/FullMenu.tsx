@@ -117,6 +117,7 @@ export function FullMenu() {
                         alt={item.name}
                         fill
                         sizes="128px"
+                        unoptimized
                         className="object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
                       />
                     </div>
