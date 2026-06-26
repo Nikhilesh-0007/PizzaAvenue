@@ -55,8 +55,9 @@ export function MobileStickyBar() {
             </Link>
             
             <Link
-              href="https://maps.google.com"
+              href="https://maps.app.goo.gl/41e3kDZPPBzUGVKE9"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex-1 flex flex-col items-center justify-center gap-1 p-2 text-dark/70 hover:text-primary transition-colors"
             >
               <Navigation size={20} />

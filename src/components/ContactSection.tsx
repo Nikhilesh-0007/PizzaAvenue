@@ -62,10 +62,15 @@ export function ContactSection() {
               </div>
             </div>
 
-            <button className="mt-12 w-full py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-bold text-lg hover:shadow-[0_0_20px_rgba(255,107,53,0.3)] transition-all duration-300 flex items-center justify-center gap-2">
+            <a 
+              href="https://maps.app.goo.gl/41e3kDZPPBzUGVKE9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-12 w-full py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-bold text-lg hover:shadow-[0_0_20px_rgba(255,107,53,0.3)] transition-all duration-300 flex items-center justify-center gap-2"
+            >
               <Navigation size={20} />
               <span>Get Directions</span>
-            </button>
+            </a>
           </motion.div>
 
           {/* Map Placeholder */}

@@ -86,7 +86,14 @@ export function Footer() {
           <ul className="space-y-4 text-sm text-white/70 font-medium">
             <li className="flex items-start gap-3">
               <MapPin size={20} className="text-primary shrink-0" />
-              <span>123 Pizza Street, Sainikpuri,<br />Hyderabad, 500094</span>
+              <a 
+                href="https://maps.app.goo.gl/41e3kDZPPBzUGVKE9" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-primary transition-colors"
+              >
+                123 Pizza Street, Sainikpuri,<br />Hyderabad, 500094
+              </a>
             </li>
             <li className="flex items-center gap-3">
               <Phone size={20} className="text-primary shrink-0" />
