@@ -84,7 +84,7 @@ export function ContactSection() {
             {/* Fake Map iframe placeholder styling to look good */}
             <div className="absolute inset-0 bg-background/50 z-10 pointer-events-none" />
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15222.094595292416!2d78.5323533!3d17.4824976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9baf2f5c76db%3A0xc3c51121ab9dcb!2sSainikpuri%2C%20Secunderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1709123456789!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15222.094595292416!2d78.5389023!3d17.4879641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9bfe9a6d8d27%3A0x39d85afe322bd229!2sPizza%20Avenue!5e0!3m2!1sen!2sin!4v1709123456789!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0, filter: "grayscale(1) invert(0.9) hue-rotate(180deg)" }} 
