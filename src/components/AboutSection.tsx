@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { Wheat, Flame, Heart, Pizza, MapPin } from "lucide-react";
 import Link from "next/link";
@@ -29,7 +29,7 @@ export function AboutSection() {
     }
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -40,7 +40,7 @@ export function AboutSection() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
@@ -67,6 +67,7 @@ export function AboutSection() {
                 src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1000&auto=format&fit=crop"
                 alt="Delicious cheese pull pizza"
                 fill
+                unoptimized
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-80"></div>
@@ -78,6 +79,7 @@ export function AboutSection() {
                 src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=800&auto=format&fit=crop"
                 alt="Wood-fired pizza oven"
                 fill
+                unoptimized
                 className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
             </div>
@@ -92,6 +94,7 @@ export function AboutSection() {
                 src="https://images.unsplash.com/photo-1555072956-7758afb20e8f?q=80&w=600&auto=format&fit=crop"
                 alt="Fresh ingredients and dough"
                 fill
+                unoptimized
                 className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
             </motion.div>
