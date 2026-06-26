@@ -43,7 +43,7 @@ export function MobileStickyBar() {
           animate={{ y: 0 }}
           exit={{ y: 100 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden fixed bottom-4 left-4 right-4 z-50"
+          className="md:hidden fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] left-4 right-4 z-50"
         >
           <div className="bg-background/95 backdrop-blur-xl border border-dark/10 shadow-2xl rounded-full p-2 flex justify-between items-center gap-2">
             <Link
