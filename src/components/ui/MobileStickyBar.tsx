@@ -20,9 +20,12 @@ export function MobileStickyBar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const isAtBottom = window.innerHeight + currentScrollY >= document.documentElement.scrollHeight - 200;
       
-      // Hide on scroll down, show on scroll up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Hide if at the bottom (in the footer), or on scroll down. Show on scroll up.
+      if (isAtBottom) {
+        setIsVisible(false);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
