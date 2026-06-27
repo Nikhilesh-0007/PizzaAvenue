@@ -17,7 +17,10 @@ export function HeroSection() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Parallax Background */}
-      <motion.div style={{ y }} className="absolute inset-0 z-0">
+      <motion.div 
+        style={{ y }} 
+        className="absolute inset-0 z-0 will-change-transform"
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-background z-10" />
         <Image
           src="/hero-bg.png"
@@ -29,14 +32,14 @@ export function HeroSection() {
         />
       </motion.div>
 
-      {/* Particles Effects (Rendered only on client to avoid hydration mismatch) */}
+      {/* Particles Effects - hidden on mobile to prevent scroll lag, enabled on md screens and up */}
       {mounted && (
-        <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden hidden md:block">
           {/* Flour Particles */}
           {[...Array(15)].map((_, i) => (
             <motion.div
               key={`flour-${i}`}
-              className="absolute bg-white/40 rounded-full blur-[1px]"
+              className="absolute bg-white/40 rounded-full blur-[1px] will-change-transform"
               style={{
                 width: Math.random() * 4 + 2 + "px",
                 height: Math.random() * 4 + 2 + "px",
@@ -60,7 +63,7 @@ export function HeroSection() {
           {[...Array(10)].map((_, i) => (
             <motion.div
               key={`ember-${i}`}
-              className="absolute bg-secondary/80 rounded-full blur-[2px]"
+              className="absolute bg-secondary/80 rounded-full blur-[2px] will-change-transform"
               style={{
                 width: Math.random() * 6 + 3 + "px",
                 height: Math.random() * 6 + 3 + "px",
@@ -86,7 +89,7 @@ export function HeroSection() {
           {[...Array(3)].map((_, i) => (
             <motion.div
               key={`smoke-${i}`}
-              className="absolute bg-white/10 blur-[40px] rounded-full"
+              className="absolute bg-white/10 blur-[40px] rounded-full will-change-transform"
               style={{
                 width: "200px",
                 height: "200px",
